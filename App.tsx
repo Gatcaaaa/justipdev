@@ -8,10 +8,14 @@ import HomeScreen from './src/screens/HomeScreen';
 import OnboardingScreen from './src/screens/OnboardingScreen';
 import {getItem} from './src/utils/AsyncStorage';
 import {ActivityIndicator, View} from 'react-native';
+import SigninScreen from './src/screens/SigninScreen';
+import SignupScreen from './src/screens/SignupScreen';
 
 export type RouteStackParamList = {
   OnboardingScreen: undefined;
   HomeScreen: undefined;
+  SigninScreen: undefined;
+  SignupScreen: undefined;
 };
 function App(): React.JSX.Element {
   const Stack = createNativeStackNavigator<RouteStackParamList>();
@@ -55,6 +59,8 @@ function App(): React.JSX.Element {
           initialRouteName={showOnboarded ? 'OnboardingScreen' : 'HomeScreen'}>
           <Stack.Screen name="OnboardingScreen" component={OnboardingScreen} />
           <Stack.Screen name="HomeScreen" component={HomeScreen} />
+          <Stack.Screen name="SigninScreen" component={SigninScreen} />
+          <Stack.Screen name="SignupScreen" component={SignupScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     </GestureHandlerRootView>
