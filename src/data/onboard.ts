@@ -1,27 +1,35 @@
-export interface onboardingProps {
+import { AnimationObject } from "lottie-react-native"
+
+export interface onboardingData {
     id: number,
-    image: string,
+    animation: AnimationObject
     title: string,
     subtitle: string,
+    backgroundColor: string
 }
 
-const onboardingData: onboardingProps[] = [
+const onboarding: onboardingData[] = [
     {
         id: 1,
-        image: require("../../assets/images/logo/onboarding1.png"),
+        animation: require("../../assets/images/onboarding/onboarding1.json"),
         title: "Fitur Chat Langsung",
         subtitle: "Sistem Chat Yang Terintegrasi",
+        backgroundColor: "#FFFFFF"
     },
     {
         id: 2,
-        image: require("../../assets/images/onboarding/onboarding2.png"),
+        animation: require("../../assets/images/onboarding/onboarding2.json"),
         title: "Pilih Mitra Jastip Kamu",
-        subtitle: "Pilih Mitra Jastip Kamu secara Pribadi"
+        subtitle: "Pilih Mitra Jastip Kamu secara Pribadi",
+        backgroundColor: "#FFFFFF"
     },
     {
         id: 3,
-        image: require("../../assets/images/onboarding/onboarding3.png"),
+        animation: require("../../assets/images/onboarding/onboarding3.json"),
         title: "Pilih Barang",
-        subtitle: "Pilih Barang yang kamu ingin titipkan"
+        subtitle: "Pilih Barang yang kamu ingin titipkan",
+        backgroundColor: "#FFFFFF"
     }
 ]
+
+export default onboarding
